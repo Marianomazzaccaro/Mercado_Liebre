@@ -1,0 +1,179 @@
+
+/*Cuerpo de texto*/
+body{
+
+font-size: 12px;
+
+}
+
+header {
+
+background-color: #EAC926;
+font-family: 'Roboto', sans-serif;
+
+
+}
+
+
+h3{
+    font-size: 24px;
+
+
+
+}
+
+h2 {
+
+font-size: 24px;
+
+}
+
+nav{
+
+    text-align: left;
+    padding: 20px 0px;
+    font-size: 25px;
+   
+
+}
+
+
+footer {
+
+font-size:12px ;
+text-align: center;
+margin-top: 50px;
+
+}
+
+footer i{
+
+    
+    font-size: 2em;
+    color:#1259c3;
+    
+
+}
+
+footer p{
+
+    margin-bottom: 20px;
+
+
+
+
+}
+
+footer h3{
+    margin-bottom: 1px;
+}
+
+.logoml{
+
+    width:200px;
+    margin-left: 40px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+}
+
+.barra-busqueda{
+
+    width: 70%;
+
+    background-color: white;
+    margin-left: 40px;
+    box-sizing: border-box;
+    width:180p;   
+    color:#666;
+    border-style: solid;
+    
+
+
+}
+
+.buscar-lupa{
+
+    margin-left: 40px;
+   background-color: white;
+   border-style: solid;
+
+
+
+}
+.cuotas{
+
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+
+
+
+
+
+}
+.banner{
+
+    
+    width:20px;
+
+}
+
+
+.segunda-lista{
+
+    margin-bottom: 20px;
+
+}
+
+.burguer {
+
+font-size: 1em;
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+
+border-color: blue;
+border-radius:4px;
+color: white;
+
+}
+
+.fotos-todas{
+
+    width: 300px;
+
+
+
+
+}
+.precio{
+
+    font-size: 18px;
+
+}
+
+.descuento{
+
+    font-size: 16px;
+
+}
+
+.nombre{
+
+    font-size: 16px;
+
+
+}
+
+.copy{
+
+text-align: left;
+
+
+}
+
+
+
