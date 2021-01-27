@@ -1,15 +1,32 @@
 
 /*Cuerpo de texto*/
+
+*{
+
+    box-sizing: border-box;
+
+
+}
+
 body{
 
 font-size: 12px;
+font-family: 'Roboto', sans-serif;
+background-color: lightgray
 
 }
 
 header {
 
+font-size: 12px;
 background-color: #EAC926;
-font-family: 'Roboto', sans-serif;
+padding: 20px;
+
+
+}
+
+section{
+
 
 
 }
@@ -22,11 +39,14 @@ h3{
 
 }
 
-h2 {
+main  h2{
 
 font-size: 24px;
 
+
 }
+
+
 
 nav{
 
@@ -36,6 +56,26 @@ nav{
    
 
 }
+
+main {
+
+    width: 90%;
+    margin: 0 auto;
+   
+
+
+}
+
+article{
+
+text-align: center;
+margin: 0 auto;
+margin-bottom:10px;
+background-color: white;
+
+
+}
+
 
 
 footer {
@@ -108,15 +148,14 @@ footer h3{
     font-size: 25px;
 
 
-
-
-
 }
-.banner{
+
+
+.banner img{
 
     
-    width:20px;
-
+    width: 100%;
+   
 }
 
 
@@ -128,16 +167,22 @@ footer h3{
 
 .burguer {
 
+
 font-size: 1em;
 display: flex;
-
 align-items: center;
 justify-content: center;
+width: 35px;
+height: 35px;
+margin:auto;
 
 
-border-color: blue;
+
+border-style: solid 1px #1259c3;
 border-radius:4px;
 color: white;
+background-color:#03264C;;
+padding: 12px;
 
 }
 
@@ -152,12 +197,16 @@ color: white;
 .precio{
 
     font-size: 18px;
+    
 
 }
 
 .descuento{
 
     font-size: 16px;
+    color:rgba(11, 128, 0, 0.932);
+    margin-bottom: 10px;
+    
 
 }
 
@@ -174,6 +223,53 @@ text-align: left;
 
 
 }
+
+.detalle i{
+
+
+font-size:20px;
+color:rgba(11, 128, 0, 0.932)
+
+
+}
+
+.detalle {
+
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    
+    text-align: left;
+      
+}
+
+@media (min-width: 361px){
+
+    .nombre {display: none;}
+   article { box-shadow: 0px 0px 10px rgb(100, 100, 100);}
+
+   
+
+    .listauno,
+    .listados {display:none}
+
+
+   }
+
+
+ 
+
+
+
+@media (min-width: 769px){
+
+    .burguer {display:none}
+
+    
+
+
+}
+
+
 
 
 
