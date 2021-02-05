@@ -1,61 +1,112 @@
 
 /*Cuerpo de texto*/
 
-*{
-    margin:0px;
-    padding: 0px;;
+*{ 
     box-sizing: border-box;
-
+    margin: 0 px;
+    padding: 0px;
 
 }
 
 body{
-
 font-size: 12px;
 font-family: 'Roboto', sans-serif;
 background-color: rgba(128, 128, 128, 0.171)
 
 }
 
-header {
+/*HEADER*/
+.main-header {
 
-font-size: 12px;
 background-color: #EAC926;
 padding: 20px;
 font-family: 'Roboto', sans-serif;
-
+position: fixed; /*Sale del flujo natural y se viene adelante*/
+top:0;/*Siempre lo hace respecto a los limites del vw, por eso se pone top=0 para que siempre quede arriba y no tape lo demas*/
+z-index: 100;
 }
 
 
-main  h2{
-
-font-size: 24px;
-color: gray;
+.copy-header{
+font-weight: 400; /*negrita*/
 text-align: center;
-padding: 5px;
 
+}
+
+.busqueda{
+    width:100%;
+    padding: 8px 8px;
+}
+
+.search-bar{
+    position:relative ;
+    
+}
+.search i{
+    font-size: 15px;
+    
+    position: absolute;
+    right: 5px;
+    top:8px;
+    
+
+}
+
+/*BURGUER BUTTON*/
+
+.hamburguer-button{
+    background-color:#03264C ;
+    color:#FFFFFF;
+    display:block;
+    max-width: 50px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin:auto;
 
 }
 
 
 
-nav{
+/*MAIN NAV-BAR*/
 
-    text-align: left;
- 
- 
-   
+.main-navbar{
+    display:none;
+}
+
+.main-navbar ul {
+    list-style: none;
+    margin:0;
+    padding: 0; 
+}
+
+.main-navbar a {
+    text-decoration: none; /*No pone el subrayado*/
+    color: #222222;
+    display:inline-block;/*todas las a son elementos de linea, asi que las convierto*/
+    padding: 5px 0;
+    font-size: 17px;
 
 }
 
+/*MAIN*/
 main {
 
     width: 90%;
     margin: 0 auto;
    
-
-
 }
+
+main  h2{
+
+    font-size: 24px;
+    color: gray;
+    text-align: center;
+    padding: 5px;
+    
+    
+    }
 
 article{
 
@@ -70,11 +121,10 @@ background-color: white;
 }
 
 
-
+/*FOOTER*/
 footer {
 
 font-size:12px ;
-text-align: center;
 margin-top: 50px;
 
 }
@@ -84,73 +134,39 @@ footer i{
     
     font-size: 2em;
     color:#1259c3;
-    
+       
 
 }
 
 footer p{
 
     margin-bottom: 20px;
-
-
-
-
+   
 }
 
 footer h3{
     margin-bottom: 1px;
 }
 
-.logoml{
+.logo{
 
     width:200px;
-    margin-left: 40px;
-    padding-top: 40px;
-    padding-bottom: 20px;
-
-}
-
-.barra-busqueda{
-
-    width: 70%;
-
-    background-color: white;
-    margin-left: 40px;
-    box-sizing: border-box;
-    width:180p;   
-    color:#666;
-    border-style: solid;
     
 
-
 }
 
-.buscar-lupa{
 
-    margin-left: 40px;
-   background-color: white;
-   border-style: solid;
-
-
-
-}
 .cuotas{
 
     text-align: center;
     margin-top: 20px;
     font-size: 25px;
-
-
 }
-
-
 .banner img{
 
     
     width: 100%;
-   
-}
-
+   }
 
 .segunda-lista{
 
@@ -158,40 +174,26 @@ footer h3{
 
 }
 
-.burguer {
 
-
-font-size: 1em;
-display: flex;
-align-items: center;
-justify-content: center;
-width: 35px;
-height: 35px;
-margin:auto;
-
-
-
-border-style: solid 1px #1259c3;
-border-radius:4px;
-color: white;
-background-color:#03264C;;
-padding: 12px;
-
-}
 
 .fotos-todas{
 
     width: 100%;
 
-
-
-
 }
+
+
 .precio{
 
     font-size: 18px;
-  
+    flex-grow: 3;
+     
+}
 
+.precio-desc{
+    display: flex;
+    align-items:baseline;
+    
 }
 
 .descuento{
@@ -199,14 +201,18 @@ padding: 12px;
     font-size: 16px;
     color:rgba(11, 128, 0, 0.932);
     margin-bottom: 10px;
+    flex-grow: 7;
     
+    }
 
-}
+
 
 .nombre{
 
     font-size: 16px;
-
+    font-weight: 400;
+    
+  
 
 }
 
@@ -214,64 +220,504 @@ padding: 12px;
 
 text-align: left;
 
-
 }
 
-.detalle i{
-
-
-    color:rgba(11, 128, 0, 0.932);
-       
-    font-size: 20px;
-
-   
-    
-   
-
-
-}
 
 .detalle {
 
     border-top: 1px solid #ebebeb;
     padding: 15px;
     text-align: left;
-   
-  
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    
+      
+    
+      }    
+
+.detalle i{
+
+display: block;
+ font-size: 16px;
+ padding: 5px;
+ width: 30px;
+ height: 30px;
+ border: 1px solid #39b54a;
+ background-color: #FFF;
+ border-radius: 50%;
+ position: absolute;
+ right: 20px;
+ top: -15px;
+ color:rgba(11, 128, 0, 0.932);
+
+}
+/*FORMULARIO DE REGISTRO*/
+
+.formregister {
+    padding: 20px 15px;
+    margin-top: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+.controlreg {
+    width:100%;
+    padding: 8px 8px;
+    border: solid 1px #1259c3;
+
+}
+
+.formregister label{
+    margin-bottom: 5px;    
+    display:block; /*Queda el label encima del input"*/
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+
+.cformreg{
+    margin-bottom: 15px;
+    
+
+}
+.foto{
+    border:solid #1259c3 1px;
+    padding:6px;
+}
+
+
+
+.botones-register{
+    text-align: center;
+
+}
+.enviar{
+    color:#FFFFFF;
+    background-color:#1259c3;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-size:20px;
+    
+    padding: 5px;
+
+}
+
+.borrar{
+    color:#FFFFFF;
+    background-color:#1259c3;
+    border-radius: 5px;
+    
+    font-size:20px;
+    padding: 5px;
       
 }
 
-@media (min-width: 361px){
-
-    .nombre {display: none;}
 
 
-   article { box-shadow: 0px 0px 10px rgb(100, 100, 100);
-   
+/*FORMULARIO DE LOGIN*/
+.formlogin{
+    margin-top: 180px;
+      
 
 }
 
-       .listauno,
-    .listados {display:none}
+.controllog{
+    width:100%;
+    padding: 8px 8px;
+    border: solid 1px #1259c3;
+    
+
+}
+
+.formlogin label{
+    margin-bottom: 5px;    
+    display:block; /*Queda el label encima del input"*/
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.control-formulario{
+    margin-bottom: 15px;
+}
+.boton-login{
+    font-size:25px;    
+    color:#FFFFFF;
+    background-color:#1259c3;
+    border-radius: 5px;
+    margin-left: 110px;
+    font-style:normal;
+    padding: 5px;
+    
+   
+    
+    
+}
 
 
+/*FORMULARIO DEL HOME*/
 
+.create-form{   
+    padding: 20px 15px;
+    margin-top: 240px;
+    
+}
 
+.control-formulario{
+    margin-bottom: 15px;
 
+}
+
+.control-formulario label{
+    margin-bottom: 5px;
+    font-style: italic;
+    display:block; /*Queda el label encima del input"*/
+}
+
+.control{
+    width:100%;
+    padding: 8px 8px;
+
+}
+
+.boton-formulario{
+
+    background-color: #39b54a;
+    border:none;
+    font-size:20px;
+    color:#ffffff;
+    padding: 5px 10px;
+    border-radius:5px ;
+}
+
+/*MEDIAS*/
+@media (min-width: 361px){
+
+    
+    .nombre{display: none;}
+     article { box-shadow: 0px 0px 10px rgb(100, 100, 100);}
+
+     .productos{
+
+        display: flex;
+        flex-wrap:wrap;/*que las cajas vayan para abajo*/
+        justify-content: space-between;
+          
+
+     }
+
+     .logo{
+         width:50%;
+     }
+
+     .main-header-top-bar{
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-around;
+         align-items: center;
+
+     }
+    .copy-header{
+     
+        align-items: center;
+
+    }
+
+    .search-bar{
+        width: 45%;
    }
 
+    .formlogin{
+        margin-top: 150px;
+       display: flex;
+       flex-direction: column;
+          
+       
+                
+        }
+  
+    .boton-login{
+             
+        display: flex;
+        justify-content: center;
+        font-size:20px;
+        margin:auto;
+        padding: 0px 20px;
+        width: 100%;
+        
+
+    }
+
+    footer  {
+
+            font-size:12px ;
+            text-align: center;
+            margin-top: 50px;
+    }
+        
+}
+
+@media (min-width: 768px){
+
+    .logo{
+
+        width:200px;
+        
+       
+    }
+    .banner{
+        display: none;
+    }
+
+    .main-header-top-bar{
+       
+        display:flex;
+        
+        justify-content: space-between;
+        align-items: center;
+        margin:auto;
+        margin-bottom: 20px;
+    }
+
+    .main-header{
+        width: 100%;
+    }
+
+    .search{
+        
+       width: 100%;
+        
+    }
+ 
+
+    .copy-header{
+
+      
+        max-width: none;
+        font-size: 15px;
+        font-weight: 400;
+        margin:0;
+      
+              
+            }
+     .search-bar{
+             width: 25%;
+        }
+
+      .busqueda{
+            font-size:15px;
+        }
+    
+    .hamburguer-button{
+        display: none;
+    }
+
+    .main-navbar{
+            display: flex;
+            /*border: dotted 2px red; Se usa para saber qué espacio estamos editando"*/
+            justify-content: space-between;
+
+    }
+
+    .main-navbar ul{
+        display: flex;
+
+    }
+
+    .main-navbar li{
+        margin: 0 5px;
+
+    }
+
+    .productos{
+
+        display: flex;
+        flex-wrap:wrap;/*que las cajas vayan para abajo*/
+        justify-content: space-between;
+        position: relative;
+              
+
+     }
+     .productos article{
+         width:45%;
+     }
+
+     
+    .formlogin{
+        margin-top: 150px;
+       display: flex;
+       flex-direction: column;
+    
+      
+
+          
+        }
+  
+    .boton-login{
+             
+        display: flex;
+        justify-content: center;
+        font-size:20px;
+        margin:auto;
+        padding: 0px 20px;
+        width:15%;
+
+        
+
+    }
+     
+    footer {
+
+        font-size:12px ;             
+        margin-top: 50px;    
+              
+
+    }
+
+    .formregister {
+           
+            margin-top: 150px;
+          
+            
+          }
 
 
-@media (min-width: 769px){
 
-    .burguer {display:none}
+}
+    
+         
+
+
+@media (min-width: 1200px){
+
+    .logo{
+        width: 250px;
+
+    }
 
     
 
 
+    .main-header-top-bar,
+    .main-navbar{ 
+        max-width: 1200px;
+        margin:auto;
+        
+   }
+
+   .main-header-top-bar{
+    align-items: center;
+   
+   }
+
+   .copy-header{
+
+    max-width: none;
+    font-size: 22px;
+    font-weight: 400;
+    margin:0;
+        }
+
+    .search-bar{
+        width: 30%;
+    }
+    .busqueda{
+        font-size:15px;
+    }
+
+
+   .main-navbar li{
+    margin: 0 10px;
+    margin-top: 20px;
+
+}
+.main-navbar a{
+    font-size: 19px;
+
+}
+
+.productos{
+
+    display: flex;
+    flex-wrap:wrap;/*que las cajas vayan para abajo*/
+    justify-content: space-between;
+    position:relative;
+           
+
+ }
+ .productos article{
+     width:20%;
+ }
+
+
+main section article:hover .nombre{
+    display: block;
+           
+}
+
+main section article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+main section article i{
+    transition:  1000ms;
+}
+
+main section article:hover i{
+
+    transform: rotate(-90deg);
+}
+
+
+.formlogin{
+    margin-top: 180px;
+   display: flex;
+   flex-direction: column;
+  
+
+      
+    }
+
+.boton-login{
+         
+    display: flex;
+    justify-content: center;
+    font-size:20px;    
+    padding: 0px 20px;
+    
+
+}
+
+.boton-login:hover{
+         
+    background-color: #0022AA;
+
+}
+
+footer i:hover{
+    color:green
+}
+ 
+footer .columnas {
+
+    display: flex;
+    font-size:12px ;
+   
+    width: 100%;
+   
+    
+    margin-top: 50px;
+}
+
+.copy{
+
+    flex-wrap: wrap;
 }
 
 
 
+}
 
 

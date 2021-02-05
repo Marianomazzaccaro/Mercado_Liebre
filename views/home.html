@@ -3,75 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Mercado Liebre</title>
+    <!--<link href="link rel="preconnect" href="https://fonts.gstatic.com">-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <!--<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">-->
 
-    <link rel="stylesheet" href="/Css/Styles.css">
+    <link rel= "stylesheet" href= "/css/normalize.css">
+    <script src="https://kit.fontawesome.com/04cb19a8c5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Css/styles.css">
+  
+
 
 </head>
 <body>
-    <header>   
-            <div class="container">
+    <header class = "main-header">  
 
-                <div class="imagen">
-                    <div class="logoml"><img src="/images/logo-mercado-liebre.svg" alt="Aquí va una foto"></div>
-                </div> 
-                
-                <div class="detail">
-                
-                    <div class="barra-busqueda">Buscar productos, marcas</div>
-
-                    <span class="buscar-lupa">
-
-                        <i class="fas fa-search"></i>
-
-                    </span>
-
-                  
-                   
-                    <div class="cuotas"><i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito</div>
-                    
+        <div class="main-header-top-bar">             
+             <img src="/images/logo-mercado-liebre.svg" class= "logo">
+             <form action="" method="POST" class="search-bar"><!--Para algo sensible o crear producto. En formularios conviene usar POST antes de GET-->
+                <div class="search">        
+                    <input type="text" placeholder="Buscar productos, marcas y más" name="buscar" class="busqueda" >  <!--" name": Poder identificar bien a donde va cada dato. Muy importante-->
+                    <i class="fas fa-search"></i>
                 </div>
+            </form>            
+             <h2 class="copy-header">
+                <i class="fas fa-hand-holding-usd"></i>
+                Comprá en cuotas y sin tarjeta de crédito            
+            </h2>
+        </div>
 
-                </div>
-            </div>
+        <a href="#" class="hamburguer-button">
+            <i class="fas fa-bars"></i>
+        </a>
 
-            <nav>
 
-         
-
+        <nav class="main-navbar"> 
             
-                <section class="listauno">
-                <div><a href=>Ofertas</a></div>
-                <div><a href=>Tiendas Oficiales</a></div>
-                <div><a href=>Vender</a></div>
-                <div><a href=>Ayuda</a></div>
-            </section>
-            
-                <br> <!--Salto de linea-->
-           
+        <ul class="left-navbar">
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Tiendas Oficiales</a></li>
+            <li><a href="#">Vender</a></li>
+            <li><a href="#">Ayuda</a></li>
+        </ul>
+        
+        <ul class="right-navbar">
+            <li><a href="#">Creá tu cuenta <i class="fas fa-credit-card agranda" ></i></a></li>
+            <li><a href="#">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+            <li><a href="#">Mis Compras <i class="fas fa-shopping-basket"></i></a></li>
+        </ul>
+        
+        
+        
+        </nav>
 
-            <section class="listados">
-
-                <div><span><a href=>Créa tu cuenta</a> </span> <i class= "fas fa-id-card"></i> </div>
-                <div><span><a href=>Ingresá</a></span> <i class="fas fa-sign-in-alt"></i></div>
-                <div><span><a href=>Mis compras</a></span> <i class="fas fa-shopping-basket"></i></div>
-            </section>
-            
-           
-
-            <div class="burguer"><i class="fa fa-bars burger"></i></div>
-            
-            
-            </nav>
-            
 
         </header>
 
-        <div class="banner"><img src="/images/img-home-banner.jpg"  alt="Aquí va una foto"></div>
+<!--Creo Formulario -->
+
+<form action="/Crear-producto" method="POST" class="create-form"><!--Para algo sensible o crear producto. En formularios conviene usar POST antes de GET-->
+    <div class="control-formulario">
+        <label>Nombre del producto:</label>
+        <input type="text" name="nombre" class="control">  <!--" name": Poder identificar bien a donde va cada dato. Muy importante-->
+    </div>
+
+    <div class="control-formulario">
+        <label>Precio:</label>
+        <input type="text" name="precio" placeholder="123.56" class="control"> <!--Puede ser number-->
+    </div>
+
+    <div class="control-formulario">
+        <label>Categoría:</label>
+    <select name="categoría" class="control"><!--"select": Agrupa opciones y las opciones se generan con "option"-->
+        <option value="hogar">Hogar</option><!--"option" se muestra al visitante, "value" va al back-->
+        <option value="electro">Electro</option>
+        <option value="indumentaria">Indumentaria</option>
+    </select>
+    </div>
+    <div class="control-formulario">
+        <label>Ciudad:</label>
+    <select name="ciudad" class="control"><!--"select": Agrupa opciones y las opciones se generan con "option"-->
+        <option value="ba">Buenos Aires</option><!--"option" se muestra al visitante, "value" va al back-->
+        <option value="ro">Rosario</option>
+        <option value="me">Mendoza</option>
+    </select>
+    </div>
+    <div class="control-formulario">
+        <label>Descripción:</label>
+        <textarea name="descripcion"></textarea>
+    </div>
+    <div class="control-formulario">
+        <label>Está en oferta:</label>
+        <input type="radio" name="enOferta" > 
+    </div>
+
+    <button type="submit" class="boton-formulario">Guardar</button>
+    <button type="reset" class="boton-formulario">Borrar</button> <!--Borrar lo escrito en el formulario, no base de datos-->
+
+  
+
+
+
+</form>
+
+        <div class="banner"><img src="/images/img-home-banner.jpg"  alt="banner">
+        </div>
 
             <main>
 
@@ -79,17 +116,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css
                 <section>
                     <h2>Basado en tu última visita</h2>
 
-                <article>
+            <div class="productos">   
+
+                <article >
                     
                 
                     <img src="/images/img-cafetera-moulinex.jpg" class= "fotos-todas">
-
+                    
                 <div class ="detalle">
                     
                     <i class="fas fa-truck"></i>
-                 
-                    <div class="precio">$6.770</div>
-                    <div class="descuento">40% OFF</div>
+                 <div class="precio-desc">
+                    <span class="precio">$6.770</span>
+                    <span class="descuento">40% OFF</span>
+                </div>
                     <div class="nombre">Cafetera Moulinex</div>
                     
                     
@@ -104,13 +144,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css
                 
                     <img src="/images/img-macbook-pro-2019.jpg" class= "fotos-todas" >
                 
-            <div class ="detalle">
+                <div class ="detalle">
 
                     <i class="fas fa-truck"></i>
-                    <div class= "precio">$230.000</div>
-                    <div class= "descuento">20% OFF</div>    
+                <div class="precio-desc">
+                    <span class= "precio">$230.000</span>
+                    <span class= "descuento">20% OFF</span>
+                </div>    
                     <div class= "nombre">Macbook Pro 2019</div>
                 </div>
+               
                 </article>
 
            
@@ -120,12 +163,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css
                 
                     <img src="/images/img-samsung-galaxy-s10.jpg" class= "fotos-todas">
                 
-                    <div class ="detalle">
+                <div class ="detalle">
 
                     <i class="fas fa-truck"></i>
-                    <div class= "precio">$70.500</div>
-                    <div class= "descuento">10% OFF</div>
+                <div class="precio-desc">
+                    <span class= "precio">$70.500</span>    
+                    <span class= "descuento">10% OFF</span>
+                </div>  
                     <div class= "nombre">Samsung Galaxy S10</div>
+               
 
                 </div>
                 </article>
@@ -135,21 +181,27 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css
                 
                     <img src="/images/img-tv-samsung-smart.jpg" class= "fotos-todas">
                 
-                    <div class ="detalle">
+                <div class ="detalle">
 
-                    <i class="fas fa-truck"></i>    
-                    <div class= "precio">$23.200</div>
-                    <div class= "descuento">5% OFF</div>
+                    <i class="fas fa-truck"></i>
+                <div class="precio-desc">  
+                    <span class= "precio">$23.200</span>
+                    <span class= "descuento">5% OFF</span>
+                </div>  
                     <div class= "nombre">SmartTv Samsung 43</div>
-              </div>
+                </div>
 
                 </article>
+            </div>
 
             </section>
 
             <section>
 
+            
+            
                 <h2>Ofertas</h2>
+            <div class="productos">  
 
                     <article>
                                             
@@ -158,8 +210,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css
                     <div class ="detalle">
 
                         <i class="fas fa-truck"></i>
-                        <div class= "precio">$6.770</div>
-                        <div class= "descuento">40% OFF</div>
+                    <div class="precio-desc">
+                        <dispanv class= "precio">$6.770</span>
+                        <span class= "descuento">40% OFF</span>
+                    </div>  
                         <div class= "nombre">Cafetera Moulinex</div>
 
                     </div>
@@ -171,14 +225,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css
                     
                         <img src="/images/img-macbook-pro-2019.jpg" class= "fotos-todas">
                     
-                        <div class ="detalle">
+                    <div class ="detalle">
 
                         <i class="fas fa-truck"></i>
-                        <div class= "precio">$230.000</div>
-                        <div class= "descuento">20% OFF</div>
+                    <div class="precio-desc">
+                        <span class= "precio">$230.000</span>
+                        <span class= "descuento">20% OFF</span>
+                    </div>  
                         <div class= "nombre">Macbook Pro 2019</div>
 
-                        </div>
+                    </div>
 
                     </article>
               
@@ -187,14 +243,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css
                     
                         <img src="/images/img-samsung-galaxy-s10.jpg" class= "fotos-todas">
                     
-                        <div class ="detalle">
+                    <div class ="detalle">
 
                         <i class="fas fa-truck"></i>
-                        <div class= "precio">$70.500</div>
-                        <div class= "descuento">10% OFF</div>
+                    <div class="precio-desc">
+                        <span class= "precio">$70.500</span>
+                        <span class= "descuento">10% OFF</span>
+                    </div>  
                         <div class= "nombre">Samsung Galaxy S10</div>
 
-                        </div>
+                    </div>
 
                     </article>
              
@@ -206,14 +264,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css
                    <div class ="detalle"> 
 
                         <i class="fas fa-truck"></i>
-                        <div class= "precio">$23.200</div>
-                        <div class= "descuento">5% OFF</div>
+                    <div class="precio-desc">
+                        <span class= "precio">$23.200</span>
+                        <span class= "descuento">5% OFF</span>
+                    </div>  
                         <div class= "nombre">SmartTv Samsung 43"</div>
 
                     </div>
 
                     </article>
-    
+
+                </div>
+                   
                 </section>               
     
                  
@@ -223,13 +285,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css
             <footer>
 
                 <!--FOOTER-->
+        <div class="columnas">
+            
             <section>
                 <i class="fas fa-credit-card"></i>
                 <h3>Pagá con tarjeta o en efectivo</h3>
                 <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago.¡Y siempre es seguro!</p>
             </section>
 
-            <!--FOOTER-->
+           
 
             <section>
                 <i class="fas fa-gift"></i>
@@ -238,7 +302,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css
                     productos. Es un beneficio de Mercado Puntos.</p>
             </section>
 
-            <!--FOOTER-->
+            
 
             <section>
 
@@ -246,22 +310,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css
                 <h3>Seguridad de principio a fin</h3>
                 <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
                     porque estás siempre protegid@.
-                    </p>
-
-            <!--FOOTER-->
-
+                    </p>            
+        
             </section>
+        </div>
 
-            <section class="copy"> <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>  </section>
+            <div class="copy">
+             <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p> 
+            </div>
 
                 
 
             </footer>
 
-           
-
-  
-
+           <!--FOOTER-->
  
 
 
