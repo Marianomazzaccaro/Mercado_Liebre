@@ -3,7 +3,7 @@ const path= require("path")
 
 const app = express()
 
-const publicPath = path.resolve(__dirname,"./public")
+const publicPath = path.resolve("public")
 
 
 app.use(express.static(publicPath) ); //Queremos tener la carpeta public como un recurso de archivos estaticos para siempre poder consumirla.
