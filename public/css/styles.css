@@ -93,7 +93,7 @@ text-align: center;
 /*MAIN*/
 main {
 
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
    
 }
@@ -144,6 +144,10 @@ footer p{
     margin-bottom: 20px;
     
    
+}
+
+.columnas section{
+    padding: 20px;
 }
 
 
@@ -366,7 +370,7 @@ display: block;
 
 .create-form{   
     padding: 20px 15px;
-    margin-top: 240px;
+    margin-top: 200px;
     
 }
 
@@ -466,11 +470,19 @@ display: block;
 
 @media (min-width: 768px){
 
+     .create-form{
+        display:none;
+    }
+
     .logo{
 
         width:200px;
+               
+    }
+
+    main{
         
-       
+        margin-top: 180px;
     }
     .banner{
         display: none;
@@ -478,8 +490,7 @@ display: block;
 
     .main-header-top-bar{
        
-        display:flex;
-        
+        display:flex;        
         justify-content: space-between;
         align-items: center;
         margin:auto;
