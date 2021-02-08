@@ -266,7 +266,7 @@ display: block;
 .formregister {
     padding: 20px 15px;
     margin-top: 200px;
-    text-align: center;
+   
     display: flex;
     flex-direction: column;
     
@@ -280,7 +280,8 @@ display: block;
 }
 
 .formregister label{
-    margin-bottom: 5px;    
+    margin-bottom: 5px;   
+    text-align: left; 
     display:block; /*Queda el label encima del input"*/
     font-weight: bold;
     font-size: 18px;
